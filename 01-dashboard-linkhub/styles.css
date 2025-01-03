@@ -1,0 +1,229 @@
+html {
+    scrollbar-width: none;
+    scrollbar-color: #292E49 #FFF;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+body {
+    font-family: system-ui, Arial, sans-serif;
+    background: #536976;  /* fallback for old browsers */
+    background-image: linear-gradient(to right top, #051937, #002740, #003136, #00391e, #2a3d00);
+    color: #333;
+    margin: 0;
+    padding: 0px 20px;
+    max-width: 90vw;
+    margin: auto;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    margin-bottom: 10px;
+}
+.a-nav {
+    text-decoration: none;
+}
+.a-nav:hover {
+    filter:drop-shadow(0 0 .5rem #fafafa);
+}
+.a-nav > h2 {
+    color: white;
+}
+.user-info {
+    display: flex;
+    align-items: center;
+}
+.user-info img {
+    border-radius: 5px;
+}
+h2 {
+    margin-right: 10px;
+    font-size: 1em;
+}
+.logout-button {
+    background-color: #DB4437;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-left: 10px;
+}
+.logout-button:hover {
+    background-color: #a11e12;
+}
+.upload-button {
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-decoration: none;
+}
+.upload-button:hover {
+    background-color: black
+}
+.eliminar {
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-decoration: none;
+}
+
+.eliminar:hover {
+    background-color: black
+}
+.cambiar_orden {
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-decoration: none;
+}
+.cambiar_orden:hover {
+    background-color: blue;
+}
+h3 {
+    color: #4a90e2;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    margin-top: 0px;
+}
+
+.container {
+    display: flex;
+    gap: 20px; /* Espacio entre el formulario y la tabla */
+    align-items: flex-start; /* Alinear ambos elementos arriba */
+}
+
+form {
+    background: #fafafa;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    flex: 1; /* Ocupa espacio proporcional */
+    max-height: 600px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+form input, 
+form input, form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+form input {
+   width: 95%; 
+}
+
+form input[type="submit"] {
+    background-color: #4a90e2;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+    background-color: #357abd;
+}
+
+.table-container {
+    flex: 2; /* La tabla ocupa más espacio que el formulario */
+    overflow-y: scroll; 
+    background: #fafafa;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    max-height: 600px;
+    scrollbar-width: thin;
+    scrollbar-color: #292E49 #FFF;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    padding: 12px 15px;
+    text-align: center;
+}
+
+table th {
+    background-color: #4a90e2;
+    color: #fff;
+    font-weight: bold;
+}
+table th:last {
+    background-color: #4a90e2;
+    color: #fff;
+    font-weight: bold;
+}
+table th {
+    text-align: center;
+}
+table td:nth-child(even) {
+    text-align: left;
+}
+table tr:nth-child(even) {
+    background-color: #f4f4f9;
+}
+
+table tr:hover {
+    background-color: #eaf1f8;
+}
+
+table a {
+    color: #4a90e2;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+table a:hover {
+    font-size: 1.18em;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: stretch;
+        text-align: center;
+        padding: 10px;
+    }
+
+    form, .table-container {
+        flex: none; /* Anula los valores flexibles en el modo de columna */
+    }
+    
+    /* Cambia el orden para que el formulario esté arriba */
+    form {
+        order: 1;
+    }
+
+    .table-container {
+        order: 2;
+    }
+}
