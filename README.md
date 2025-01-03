@@ -1,12 +1,12 @@
 
 # Pruebas de aplicaciones web
 
-Un conjunto de subpginas en PHP con distintos objetivos
+Un conjunto de subpáginas en PHP con distintos objetivos
 
 
 ## Despliegue
 
-Para desplegar, hazlo con XAMPP
+Para desplegar, hazlo con XAMPP, tu host o cargalo en zeabur.com
 
 
 ## Proyectos
